@@ -1,0 +1,183 @@
+{
+  "header": {
+    "logo": "CodePath",
+    "nav": {
+      "home": "Home",
+      "curriculum": "Curriculum",
+      "features": "Features",
+      "contact": "Contact"
+    },
+    "enrollButton": "Enroll Now"
+  },
+  "hero": {
+    "badge": "Now Enrolling - Frontend Development Course",
+    "title": "Master Frontend Development",
+    "titleAccent": "From Zero to Hero",
+    "description": "Join our comprehensive 8-month frontend development program. Learn HTML, CSS, JavaScript, and React from industry experts. Build real-world projects and launch your tech career.",
+    "stats": {
+      "students": "Students Enrolled",
+      "months": "Months Program",
+      "placement": "Job Placement Rate"
+    },
+    "buttons": {
+      "startJourney": "Start Your Journey",
+      "watchDemo": "Watch Demo"
+    }
+  },
+  "features": {
+    "title": "Why Choose Our Program?",
+    "subtitle": "We provide everything you need to become a successful frontend developer, from comprehensive curriculum to career support.",
+    "items": {
+      "curriculum": {
+        "title": "Industry-Ready Curriculum",
+        "description": "Learn the latest technologies used by top companies: HTML5, CSS3, JavaScript ES6+, React, and modern development tools."
+      },
+      "mentorship": {
+        "title": "Expert Mentorship",
+        "description": "Get guidance from experienced developers working at leading tech companies. Receive personalized feedback and career advice."
+      },
+      "projects": {
+        "title": "Hands-On Projects",
+        "description": "Build real-world applications that you can showcase in your portfolio. Work on group projects that simulate actual development teams."
+      },
+      "workflow": {
+        "title": "Professional Workflow",
+        "description": "Master Git, GitHub, code reviews, and agile development practices used in professional software development environments."
+      },
+      "schedule": {
+        "title": "Flexible Schedule",
+        "description": "6 hours per week with evening classes designed for working professionals. Study at your own pace with recorded sessions."
+      },
+      "support": {
+        "title": "Career Support",
+        "description": "Resume review, interview preparation, LinkedIn optimization, and job placement assistance to launch your tech career."
+      }
+    },
+    "benefits": {
+      "title": "Additional Benefits",
+      "items": {
+        "classes": {
+          "title": "Live Interactive Classes",
+          "description": "Engage with instructors and peers in real-time"
+        },
+        "resources": {
+          "title": "Comprehensive Resources",
+          "description": "Access to course materials, documentation, and tools"
+        },
+        "learning": {
+          "title": "Fast-Track Learning",
+          "description": "Accelerated curriculum designed for quick skill acquisition"
+        },
+        "certificate": {
+          "title": "Certificate of Completion",
+          "description": "Industry-recognized certification upon graduation"
+        }
+      }
+    }
+  },
+  "curriculum": {
+    "title": "Complete Curriculum",
+    "subtitle": "From HTML basics to advanced React applications. 8 months of comprehensive frontend development training with real-world projects.",
+    "schedule": {
+      "duration": "8 months",
+      "weeklyHours": "6 hours",
+      "totalHours": "192 hours",
+      "format": "Live online classes + hands-on projects",
+      "labels": {
+        "duration": "Program Duration",
+        "weekly": "Per Week",
+        "total": "Total Hours"
+      }
+    },
+    "modules": {
+      "month": "Month",
+      "topics": "What You'll Learn:",
+      "tools": "Tools & Technologies:",
+      "outcome": "Project Outcome:"
+    },
+    "cta": {
+      "title": "Ready to Start Your Journey?",
+      "description": "Join hundreds of students who have transformed their careers through our program.",
+      "button": "Enroll Now"
+    }
+  },
+  "enrollment": {
+    "title": "Join the Next Cohort",
+    "subtitle": "Transform your career in just 8 months. Limited spots available for our next cohort starting January 15, 2025.",
+    "cohortAlert": {
+      "nextCohort": "Next Cohort: January 15, 2025",
+      "spotsLeft": "Only 12 spots left out of 25"
+    },
+    "pricing": {
+      "title": "Choose Your Payment Plan",
+      "plans": {
+        "full": {
+          "name": "Full Payment",
+          "price": "$2,997",
+          "originalPrice": "$3,497",
+          "savings": "Save $500",
+          "description": "One-time payment for the complete program",
+          "popular": "Most Popular"
+        },
+        "monthly": {
+          "name": "Monthly Payment",
+          "price": "$399",
+          "description": "Split into 8 monthly payments"
+        }
+      },
+      "features": {
+        "curriculum": "Complete 8-month curriculum",
+        "classes": "Live interactive classes",
+        "mentor": "Personal mentor assignment",
+        "career": "Career support & job placement",
+        "access": "Lifetime access to materials",
+        "certificate": "Certificate of completion",
+        "portfolio": "Portfolio review sessions",
+        "alumni": "Alumni network access"
+      },
+      "chooseButton": "Choose Plan"
+    },
+    "form": {
+      "title": "Reserve Your Spot",
+      "subtitle": "Fill out the form below to secure your place in the next cohort. We'll contact you within 24 hours to complete your enrollment.",
+      "fields": {
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "experience": "Programming Experience",
+        "goals": "Career Goals"
+      },
+      "experienceOptions": {
+        "select": "Select your experience level",
+        "none": "Complete beginner",
+        "basic": "Some HTML/CSS knowledge",
+        "intermediate": "Some JavaScript experience",
+        "advanced": "Experienced but want to level up"
+      },
+      "goalsPlaceholder": "Tell us about your career goals and what you hope to achieve...",
+      "submitButton": "Reserve My Spot",
+      "note": "By submitting this form, you agree to our terms and conditions. No payment required to reserve your spot.",
+      "success": {
+        "title": "Application Submitted!",
+        "message": "We'll contact you within 24 hours to discuss your enrollment."
+      }
+    }
+  },
+  "footer": {
+    "description": "Empowering the next generation of frontend developers through comprehensive education, mentorship, and hands-on experience. Join thousands of students who have transformed their careers.",
+    "links": {
+      "program": "Program",
+      "resources": "Resources",
+      "support": "Support",
+      "contact": "Contact"
+    },
+    "copyright": "© 2024 CodePath. All rights reserved.",
+    "scrollTop": "Scroll to top"
+  },
+  "language": {
+    "switchLanguage": "Switch Language",
+    "english": "English",
+    "russian": "Русский"
+  }
+}

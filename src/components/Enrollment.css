@@ -1,0 +1,392 @@
+.enrollment {
+  background: var(--bg-primary);
+}
+
+.enrollment-header {
+  margin-bottom: 3rem;
+}
+
+.cohort-alert {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--text-light);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.alert-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.alert-icon {
+  width: 3rem;
+  height: 3rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.alert-icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.alert-title {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.alert-subtitle {
+  display: block;
+  opacity: 0.9;
+}
+
+.spots-progress {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.spots-filled {
+  height: 100%;
+  background: var(--text-light);
+  border-radius: 4px;
+  transition: width 1s ease;
+}
+
+.enrollment-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.pricing-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+}
+
+.pricing-plans {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pricing-plan {
+  background: var(--bg-primary);
+  border: 2px solid var(--border-color);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.pricing-plan:hover {
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-xl);
+}
+
+.plan-popular {
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-lg);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary-color);
+  color: var(--text-light);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.badge-star {
+  width: 1rem;
+  height: 1rem;
+}
+
+.plan-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.plan-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.plan-pricing {
+  margin-bottom: 1rem;
+}
+
+.plan-price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  display: block;
+  line-height: 1;
+}
+
+.plan-original {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  text-decoration: line-through;
+  margin-left: 0.5rem;
+}
+
+.plan-savings {
+  display: block;
+  color: var(--accent-color);
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.plan-description {
+  color: var(--text-secondary);
+  margin-bottom: 0;
+}
+
+.plan-features {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.plan-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.feature-check {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--accent-color);
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.plan-button {
+  width: 100%;
+  justify-content: center;
+}
+
+.form-container {
+  background: var(--bg-secondary);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+}
+
+.form-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.form-subtitle {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.enrollment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.label-icon {
+  width: 1rem;
+  height: 1rem;
+  color: var(--primary-color);
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-submit {
+  width: 100%;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.form-note {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.success-message {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+  color: var(--text-light);
+  border-radius: 1rem;
+}
+
+.success-icon {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-icon svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.success-message h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.success-message p {
+  opacity: 0.9;
+}
+
+@media (max-width: 1024px) {
+  .enrollment-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .pricing-plans {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .pricing-plan {
+    flex: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .cohort-alert {
+    padding: 1.5rem;
+  }
+
+  .alert-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .enrollment-content {
+    gap: 2rem;
+  }
+
+  .pricing-plans {
+    flex-direction: column;
+  }
+
+  .form-container {
+    padding: 2rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .plan-price {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    padding: 1.5rem;
+  }
+
+  .pricing-plan {
+    padding: 1.5rem;
+  }
+
+  .plan-price {
+    font-size: 1.75rem;
+  }
+
+  .pricing-title {
+    font-size: 1.5rem;
+  }
+
+  .form-title {
+    font-size: 1.5rem;
+  }
+}
