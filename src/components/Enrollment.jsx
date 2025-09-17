@@ -330,7 +330,7 @@ const Enrollment = () => {
 
                   <p className="form-note">
                     By submitting this form, you agree to our terms and conditions.
-                    No payment required to reserve your spot.
+                    No payment required to reserve your spot.{console.log('ehii')}
                   </p>
                 </form>
               )}
