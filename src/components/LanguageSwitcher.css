@@ -34,8 +34,10 @@
 }
 
 .language-flag {
-  font-size: 1rem;
-  line-height: 1;
+  width: 16px;
+  height: 12px;
+  border-radius: 2px;
+  object-fit: cover;
 }
 
 .language-text {
@@ -112,8 +114,10 @@
 }
 
 .option-flag {
-  font-size: 1.25rem;
-  line-height: 1;
+  width: 20px;
+  height: 15px;
+  border-radius: 2px;
+  object-fit: cover;
 }
 
 .option-name {

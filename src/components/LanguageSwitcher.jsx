@@ -9,8 +9,8 @@ const LanguageSwitcher = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   const languages = [
-    { code: 'en', name: 'English', flag: '🇺🇸' },
-    { code: 'ru', name: 'Русский', flag: '🇷🇺' }
+    { code: 'en', name: 'English', flag: 'https://flagcdn.com/w20/us.png' },
+    { code: 'ru', name: 'Русский', flag: 'https://flagcdn.com/w20/ru.png' }
   ]
 
   const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0]
@@ -30,7 +30,7 @@ const LanguageSwitcher = () => {
         aria-label={t('language.switchLanguage')}
       >
         <Globe className="language-icon" />
-        <span className="language-flag">{currentLanguage.flag}</span>
+        <img src={currentLanguage.flag} alt={`${currentLanguage.name} flag`} className="language-flag" />
         <span className="language-text">{currentLanguage.code.toUpperCase()}</span>
         <ChevronDown
           className={`chevron-icon ${isOpen ? 'chevron-open' : ''}`}
@@ -56,7 +56,7 @@ const LanguageSwitcher = () => {
                 whileHover={{ backgroundColor: 'var(--color-primary-50)' }}
                 whileTap={{ scale: 0.98 }}
               >
-                <span className="option-flag">{language.flag}</span>
+                <img src={language.flag} alt={`${language.name} flag`} className="option-flag" />
                 <span className="option-name">{language.name}</span>
               </motion.button>
             ))}

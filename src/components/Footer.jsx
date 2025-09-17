@@ -116,7 +116,7 @@ const Footer = () => {
               >
                 <h4 className="link-title">Program</h4>
                 <ul className="link-list">
-                  {footerLinks.program.map((link, index) => (
+                  {footerLinks.program.map((link) => (
                     <li key={link.label}>
                       <a href={link.href} className="footer-link">
                         {link.label}
@@ -135,7 +135,7 @@ const Footer = () => {
               >
                 <h4 className="link-title">Resources</h4>
                 <ul className="link-list">
-                  {footerLinks.resources.map((link, index) => (
+                  {footerLinks.resources.map((link) => (
                     <li key={link.label}>
                       <a href={link.href} className="footer-link">
                         {link.label}
@@ -155,7 +155,7 @@ const Footer = () => {
               >
                 <h4 className="link-title">Support</h4>
                 <ul className="link-list">
-                  {footerLinks.support.map((link, index) => (
+                  {footerLinks.support.map((link) => (
                     <li key={link.label}>
                       <a href={link.href} className="footer-link">
                         {link.label}
@@ -207,7 +207,7 @@ const Footer = () => {
                 © 2024 CodePath. All rights reserved.
               </p>
               <div className="legal-links">
-                {footerLinks.legal.map((link, index) => (
+                {footerLinks.legal.map((link) => (
                   <a key={link.label} href={link.href} className="legal-link">
                     {link.label}
                   </a>

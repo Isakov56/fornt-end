@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import {
   CheckCircle,
   Calendar,
@@ -16,6 +17,7 @@ import {
 import './Curriculum.css'
 
 const Curriculum = () => {
+  const { t } = useTranslation()
   const modules = [
     {
       month: 1,
@@ -148,10 +150,10 @@ const Curriculum = () => {
   ]
 
   const schedule = {
-    duration: '8 months',
-    weeklyHours: '6 hours',
-    totalHours: '192 hours',
-    format: 'Live online classes + hands-on projects'
+    duration: t('curriculum.schedule.duration'),
+    weeklyHours: t('curriculum.schedule.weeklyHours'),
+    totalHours: t('curriculum.schedule.totalHours'),
+    format: t('curriculum.schedule.format')
   }
 
   return (
@@ -164,10 +166,9 @@ const Curriculum = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">Complete Curriculum</h2>
+          <h2 className="section-title">{t('curriculum.title')}</h2>
           <p className="section-subtitle">
-            From HTML basics to advanced React applications. 8 months of comprehensive
-            frontend development training with real-world projects.
+            {t('curriculum.subtitle')}
           </p>
         </motion.div>
 
@@ -183,21 +184,21 @@ const Curriculum = () => {
               <Calendar className="schedule-icon" />
               <div>
                 <span className="schedule-value">{schedule.duration}</span>
-                <span className="schedule-label">Program Duration</span>
+                <span className="schedule-label">{t('curriculum.schedule.labels.duration')}</span>
               </div>
             </div>
             <div className="schedule-stat">
               <Clock className="schedule-icon" />
               <div>
                 <span className="schedule-value">{schedule.weeklyHours}</span>
-                <span className="schedule-label">Per Week</span>
+                <span className="schedule-label">{t('curriculum.schedule.labels.weekly')}</span>
               </div>
             </div>
             <div className="schedule-stat">
               <Users className="schedule-icon" />
               <div>
                 <span className="schedule-value">{schedule.totalHours}</span>
-                <span className="schedule-label">Total Hours</span>
+                <span className="schedule-label">{t('curriculum.schedule.labels.total')}</span>
               </div>
             </div>
           </div>
@@ -221,7 +222,7 @@ const Curriculum = () => {
                   <module.icon />
                 </div>
                 <div className="module-info">
-                  <div className="module-month">Month {module.month}</div>
+                  <div className="module-month">{t('curriculum.modules.month')} {module.month}</div>
                   <h3 className="module-title">{module.title}</h3>
                   <p className="module-description">{module.description}</p>
                 </div>
@@ -229,7 +230,7 @@ const Curriculum = () => {
 
               <div className="module-content">
                 <div className="module-topics">
-                  <h4 className="topics-title">What You'll Learn:</h4>
+                  <h4 className="topics-title">{t('curriculum.modules.topics')}</h4>
                   <ul className="topics-list">
                     {module.topics.map((topic, topicIndex) => (
                       <li key={topicIndex} className="topic-item">
@@ -242,7 +243,7 @@ const Curriculum = () => {
 
                 <div className="module-details">
                   <div className="module-tools">
-                    <h4 className="details-title">Tools & Technologies:</h4>
+                    <h4 className="details-title">{t('curriculum.modules.tools')}</h4>
                     <div className="tools-list">
                       {module.tools.map((tool, toolIndex) => (
                         <span key={toolIndex} className="tool-tag">
@@ -253,7 +254,7 @@ const Curriculum = () => {
                   </div>
 
                   <div className="module-outcome">
-                    <h4 className="details-title">Project Outcome:</h4>
+                    <h4 className="details-title">{t('curriculum.modules.outcome')}</h4>
                     <p className="outcome-text">{module.outcome}</p>
                   </div>
                 </div>
@@ -269,9 +270,9 @@ const Curriculum = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <h3 className="cta-title">Ready to Start Your Journey?</h3>
+          <h3 className="cta-title">{t('curriculum.cta.title')}</h3>
           <p className="cta-description">
-            Join hundreds of students who have transformed their careers through our program.
+            {t('curriculum.cta.description')}
           </p>
           <motion.a
             href="#enrollment"
@@ -279,7 +280,7 @@ const Curriculum = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Enroll Now
+            {t('curriculum.cta.button')}
           </motion.a>
         </motion.div>
       </div>
