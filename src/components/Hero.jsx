@@ -1,15 +1,15 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import { ArrowRight, Play, Star, Users, Clock, Trophy } from 'lucide-react'
+import { ArrowRight, Play, Star, Users, Clock, Trophy, Code } from 'lucide-react'
 import './Hero.css'
 
 const Hero = () => {
   const { t } = useTranslation()
 
   const stats = [
-    { icon: Users, value: '500+', label: t('hero.stats.students') },
-    { icon: Clock, value: '8', label: t('hero.stats.months') },
-    { icon: Trophy, value: '95%', label: t('hero.stats.placement') }
+    { icon: Code, value: 'HTML to React', label: t('hero.courseDetails.techStack') },
+    { icon: Clock, value: '192+ Hours', label: t('hero.courseDetails.content') },
+    { icon: Trophy, value: 'Real Projects', label: t('hero.courseDetails.projects') }
   ]
 
   return (

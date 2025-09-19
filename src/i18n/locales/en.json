@@ -14,10 +14,10 @@
     "title": "Master Frontend Development",
     "titleAccent": "From Zero to Hero",
     "description": "Join our comprehensive 8-month frontend development program. Learn HTML, CSS, JavaScript, and React from industry experts. Build real-world projects and launch your tech career.",
-    "stats": {
-      "students": "Students Enrolled",
-      "months": "Months Program",
-      "placement": "Job Placement Rate"
+    "courseDetails": {
+      "techStack": "Tech Stack",
+      "content": "Course Content",
+      "projects": "Portfolio Focus"
     },
     "buttons": {
       "startJourney": "Start Your Journey",
@@ -113,15 +113,15 @@
       "plans": {
         "full": {
           "name": "Full Payment",
-          "price": "$2,997",
-          "originalPrice": "$3,497",
-          "savings": "Save $500",
+          "price": "5,000,000 сум",
+          "originalPrice": "5,600,000 сум",
+          "savings": "Save 600,000 сум",
           "description": "One-time payment for the complete program",
           "popular": "Most Popular"
         },
         "monthly": {
           "name": "Monthly Payment",
-          "price": "$399",
+          "price": "700,000 сум",
           "description": "Split into 8 monthly payments"
         }
       },

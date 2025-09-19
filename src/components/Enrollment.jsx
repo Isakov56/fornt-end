@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import emailjs from '@emailjs/browser'
+import { emailjsConfig } from '../config/emailjs'
 import {
   ArrowRight,
   Check,
@@ -26,6 +28,8 @@ const Enrollment = () => {
   })
 
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+  const [submitError, setSubmitError] = useState('')
 
   const handleInputChange = (e) => {
     const { name, value } = e.target
@@ -35,18 +39,58 @@ const Enrollment = () => {
     }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    setIsSubmitted(true)
-    setTimeout(() => setIsSubmitted(false), 3000)
+    setIsLoading(true)
+    setSubmitError('')
+
+    try {
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        emailjsConfig.serviceId,
+        emailjsConfig.templateId,
+        {
+          first_name: formData.firstName,
+          last_name: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          experience: formData.experience,
+          goals: formData.goals,
+          submission_date: new Date().toLocaleString()
+        },
+        emailjsConfig.publicKey
+      )
+
+      console.log('Email sent successfully:', result)
+      setIsSubmitted(true)
+
+      // Reset form
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        experience: '',
+        goals: ''
+      })
+
+      // Hide success message after 5 seconds
+      setTimeout(() => setIsSubmitted(false), 5000)
+
+    } catch (error) {
+      console.error('Failed to send email:', error)
+      setSubmitError('Failed to submit application. Please try again or contact us directly.')
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   const plans = [
     {
       name: 'Full Payment',
-      price: '$2,997',
-      originalPrice: '$3,497',
-      savings: 'Save $500',
+      price: '5,000,000 сум',
+      originalPrice: '5,600,000 сум',
+      savings: 'Save 600,000 сум',
       description: 'One-time payment for the complete program',
       features: [
         'Complete 8-month curriculum',
@@ -62,7 +106,7 @@ const Enrollment = () => {
     },
     {
       name: 'Monthly Payment',
-      price: '$399',
+      price: '700,000 сум',
       description: 'Split into 8 monthly payments',
       features: [
         'Complete 8-month curriculum',
@@ -204,6 +248,25 @@ const Enrollment = () => {
                 We'll contact you within 24 hours to complete your enrollment.
               </p>
 
+              {submitError && (
+                <motion.div
+                  className="error-message"
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  style={{
+                    color: '#ef4444',
+                    backgroundColor: '#fef2f2',
+                    border: '1px solid #fecaca',
+                    borderRadius: '8px',
+                    padding: '12px',
+                    marginBottom: '20px',
+                    textAlign: 'center'
+                  }}
+                >
+                  {submitError}
+                </motion.div>
+              )}
+
               {isSubmitted ? (
                 <motion.div
                   className="success-message"
@@ -323,14 +386,15 @@ const Enrollment = () => {
                     className="btn btn-primary btn-large form-submit"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
+                    disabled={isLoading}
                   >
-                    Reserve My Spot
-                    <ArrowRight className="btn-icon" />
+                    {isLoading ? 'Sending...' : 'Reserve My Spot'}
+                    {!isLoading && <ArrowRight className="btn-icon" />}
                   </motion.button>
 
                   <p className="form-note">
                     By submitting this form, you agree to our terms and conditions.
-                    No payment required to reserve your spot.{console.log('ehii')}{console.log('ehii')}
+                    No payment required to reserve your spot.
                   </p>
                 </form>
               )}
