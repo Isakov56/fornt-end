@@ -30,6 +30,11 @@ const Enrollment = () => {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [submitError, setSubmitError] = useState('')
+  const [submittedEmails, setSubmittedEmails] = useState(() => {
+    // Load previously submitted emails from localStorage
+    const saved = localStorage.getItem('submittedEmails')
+    return saved ? JSON.parse(saved) : []
+  })
 
   const handleInputChange = (e) => {
     const { name, value } = e.target
@@ -43,6 +48,13 @@ const Enrollment = () => {
     e.preventDefault()
     setIsLoading(true)
     setSubmitError('')
+
+    // Check if email was already submitted
+    if (submittedEmails.includes(formData.email.toLowerCase())) {
+      setSubmitError('You have already submitted an application with this email address. Please wait for our response or contact us directly if you need to update your information.')
+      setIsLoading(false)
+      return
+    }
 
     try {
       // Send email using EmailJS
@@ -62,6 +74,12 @@ const Enrollment = () => {
       )
 
       console.log('Email sent successfully:', result)
+
+      // Add email to submitted list and save to localStorage
+      const newSubmittedEmails = [...submittedEmails, formData.email.toLowerCase()]
+      setSubmittedEmails(newSubmittedEmails)
+      localStorage.setItem('submittedEmails', JSON.stringify(newSubmittedEmails))
+
       setIsSubmitted(true)
 
       // Reset form
